@@ -10,17 +10,8 @@ services:
       - '3000:3000'
     depends_on:
       - postgres
-    # env_file:
-    #   - .env
-    environment:
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_USERNAME: postgres
-      DB_PASSWORD: password
-      DB_NAME: movie_reservation
-      NODE_ENV: development
-      JWT_SECRET: c4504ea3270b6274256f4ece4a3a63bce1d6d2e639197beec26541d2213871f4
-      JWT_EXPIRATION: 1d
+    env_file:
+      - .env
     volumes:
       - ./:/app
       - /app/node_modules
