@@ -94,17 +94,23 @@ A comprehensive backend system for a movie reservation service built with NestJS
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/movie-reservation.git
-   cd movie-reservation
+   git clone https://github.com/DAMMAK/movie-mate.git
+   cd movie-mate
 
    ```
 
 2. Create a `.env` file in the root directory with the following content:
 
 ```
-DATABASE_URL=postgresql://postgres:postgres@postgres:5432/movie_reservation
-JWT_SECRET=your_jwt_secret
+PORT=3000
 NODE_ENV=development
+JWT_SECRET=  //Include JWT_SECRET Of your choice or use this https://jwtsecret.com/generate to generate JWT_SECRET
+JWT_EXPIRATION=1d
+DB_HOST=postgres
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=password
+DB_DATABASE=movie_reservation
 API_URL=http://localhost:3000
 ```
 
